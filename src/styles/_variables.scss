@@ -1,0 +1,45 @@
+// Primary colors
+$clr-primary-400: #FBD50A;
+$clr-primary-300: #004659; // #FD0202
+$clr-primary-200: linear-gradient(89deg, #FF7A0A 12.37%, #FBD50A 50.81%);
+$clr-primary-100: linear-gradient(91deg, rgba(252, 169, 37, 0.18) 1.2%, rgba(2, 207, 253, 0.14) 121.19%);
+
+// Neutral colors
+$clr-neutral-900: #121212;
+$clr-neutral-800: #03151E;
+$clr-neutral-600: #939393;
+$clr-neutral-300: #E6E6E6;
+$clr-neutral-200: #FFF9F4;
+$clr-neutral-100: #FFFFFF;
+
+// font families
+$ff-header: "Aulia Grotesk", sans-serif;
+$ff-accent: "Swear Display", sans-serif;
+$ff-body: "Manrope", sans-serif;
+
+// font weights
+$fw-regular: 400;
+$fw-semi-bold: 500;
+$fw-bold: 600;
+$fw-bold-2: 650;
+
+// font sizes
+$fs-h1: 79px;
+$fs-h2: 52px;
+$fs-h3: 44px;
+$fs-body: 16px;
+$fs-sm: 14px;
+$fs-xl: 16px;
+
+// sizing
+$size-100: 0.25rem;
+$size-200: 0.5rem;
+$size-250: 0.625rem;
+$size-300: 0.75rem;
+$size-350: 0.875rem;
+$size-400: 1rem;
+$size-450: 1.125rem;
+$size-500: 1.5rem;
+$size-600: 2rem;
+$size-700: 3rem;
+$size-800: 4rem;

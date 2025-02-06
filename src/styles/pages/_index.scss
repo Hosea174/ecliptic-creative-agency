@@ -1,0 +1,27 @@
+@use '../variables' as *;
+
+.three-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  width: 550px;
+  height: 550px;
+  background: #fdd90dcd;
+  filter: blur(180px);
+}
+
+@media screen and (max-width: 768px) {
+  .three-overlay {
+    width: 300px;
+    height: 300px;
+    filter: blur(130px);
+  }
+}
+
+body {
+  background-color: #121212;
+}

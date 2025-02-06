@@ -1,0 +1,48 @@
+@use 'variables' as *;
+@use 'reset';
+@use 'typography';
+
+// Components
+@use 'components/button';
+@use 'components/header';
+@use 'components/footer';
+
+// Utility classes
+.container {
+  max-width: 1450px;
+  padding-inline: $size-600;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    padding-inline: $size-250;
+  }
+}
+
+.fw-regular {
+  font-weight: $fw-regular;
+}
+
+.fw-semi-bold {
+  font-weight: $fw-semi-bold;
+}
+
+.fw-bold {
+  font-weight: $fw-bold;
+}
+
+.fw-bold-2 {
+  font-weight: $fw-bold-2;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-label {
+  border-radius: 8px;
+  border-right: 2px solid rgba(251, 227, 10, 0.90);
+  border-left: 2px solid rgba(251, 227, 10, 0.90);
+  background: #322D11;
+}
