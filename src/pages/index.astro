@@ -1,15 +1,19 @@
 ---
+// components
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
+
 // styles
 import "../styles/pages/_index.scss";
 ---
 
 <Layout
   title="Ecliptic Creative Agency - Home"
-  description="A full service creative agency based in Addis Ababa, Ethiopia, and serving clients world wide."
+  description="A full service creative agency based in Addis Ababa, Ethiopia, and serving clients worldwide." 
 >
+  <Header />
   <main>
     <div class="three-wrapper">
       <div class="three-overlay"></div>

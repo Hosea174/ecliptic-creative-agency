@@ -64,6 +64,10 @@ a {
   pointer-events: auto;
 }
 
+canvas {
+  box-sizing: content-box;
+}
+
 main,
 p {
   overflow: hidden;

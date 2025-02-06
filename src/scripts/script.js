@@ -144,7 +144,7 @@ renderer.setSize(canvasWidth, canvasHeight);
 renderer.setClearColor(0xffffff, 0);
 
 const canvas = renderer.domElement;
-canvas.style.paddingBlock = "200px";
+canvas.style.paddingBlock = "400px";
 canvas.style.position = "fixed";
 canvas.style.inset = "0";
 

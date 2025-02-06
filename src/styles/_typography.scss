@@ -1,0 +1,54 @@
+@use 'variables' as *;
+
+.font-header-1 {
+  font-size: clamp(1.4375rem, 1.378221649484536rem + 0.25773195876288657vw, $fs-h1);
+  color: $clr-neutral-900;
+  font-weight: $fw-semi-bold;
+  line-height: normal;
+}
+
+.font-header-2 {
+  font-family: $ff-header;
+  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 1.190721649484536rem + 0.25773195876288657vw, $fs-h2);
+  color: $clr-neutral-900;
+  line-height: normal;
+  font-weight: $fw-semi-bold;
+  overflow: hidden;
+}
+
+.font-header-3 {
+  font-family: $ff-body;
+  font-size: $fs-h3;
+  color: $clr-neutral-900;
+  line-height: normal;
+  font-weight: $fw-semi-bold;
+}
+
+body {
+  font-family: $ff-body;
+  font-size: $fs-body;
+  line-height: 28px;
+  color: $clr-neutral-200;
+}
+
+.sub-headline {
+  color: #1F1F1F;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media (max-width: 960px) {
+  .font-header-1 {
+    line-height: 33px;
+  }
+
+}
+
+@media (max-width: 450px) {
+  .font-header-1 {
+    line-height: 32px;
+  }
+
+
+}
