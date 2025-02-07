@@ -1,5 +1,44 @@
 @use '../variables' as *;
 
+.hero-section {
+  .wrapper {
+    margin-top: 10.5rem;
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+
+      .section-highlight {
+        margin-inline: auto;
+      }
+      
+      .highlight-bg {
+        padding: 0px 12px;
+        border-radius: 80px;
+        font-family: $ff-accent;
+        border: 1px solid #FBD50A;
+        background: rgba(251, 227, 99, 0.06);
+        height: 75px;
+        display: inline-flex;
+        width: fit-content;
+        align-items: center;
+
+        .highlight-text {
+          background: $clr-primary-200;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+
+  }
+}
+
+
+
 .three-overlay {
   position: absolute;
   top: 50%;

@@ -1,9 +1,41 @@
 @use 'variables' as *;
 
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/manrope-regular.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/manrope-semibold.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Aulia Grotesk';
+  src: url('/fonts/Aulia Grotesk.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Swear Display';
+  src: url('/fonts/Swear-Display-Medium-Cilati.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 650;
+}
+
 .font-header-1 {
-  font-size: clamp(1.4375rem, 1.378221649484536rem + 0.25773195876288657vw, $fs-h1);
-  color: $clr-neutral-900;
-  font-weight: $fw-semi-bold;
+  font-family: $ff-header;
+  font-size: 79px;
+  color: $clr-neutral-100;
+  font-weight: 400;
   line-height: normal;
 }
 
