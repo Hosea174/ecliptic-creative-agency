@@ -31,6 +31,13 @@
   font-weight: 650;
 }
 
+body {
+  font-family: $ff-body;
+  font-size: $fs-body;
+  line-height: 28px;
+  color: $clr-neutral-200;
+}
+
 .font-header-1 {
   font-family: $ff-header;
   font-size: 79px;
@@ -57,17 +64,12 @@
   font-weight: $fw-semi-bold;
 }
 
-body {
-  font-family: $ff-body;
-  font-size: $fs-body;
-  line-height: 28px;
-  color: $clr-neutral-200;
-}
 
 .sub-headline {
-  color: #1F1F1F;
-  font-size: 16px;
-  line-height: 22px;
+  color: $clr-neutral-300;
+  font-weight: 400;
+  line-height: 156%;
+  letter-spacing: 0.32px;
 }
 
 @media (max-width: 960px) {

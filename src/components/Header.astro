@@ -15,7 +15,7 @@ const { class: className } = Astro.props;
 <header>
   <div class:list={["header-wrapper", "container", className]}>
     <a href="/" aria-label="Home" class="logo-link"
-      ><img src={logo.src} alt="" width="135px"/></a
+      ><img src={logo.src} alt="" width="135px" /></a
     >
 
     <div class="nav-items">
@@ -48,7 +48,7 @@ const { class: className } = Astro.props;
       <div class="nav-btns">
         <Button
           href="/contact"
-          class:list={[className]}
+          class:list={["btn-primary", className]}
           text="Contact Us"
           icon="message"
         />

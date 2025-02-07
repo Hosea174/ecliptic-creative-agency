@@ -8,9 +8,15 @@
     gap: 8px;
     align-items: center;
     border-radius: 30px;
-    background: #F9CC09;
     outline: none;
     border: none;
+   
+    &.btn-primary {
+      background: $clr-primary-400;
+    }
+    &.btn-secondary {
+      background: $clr-neutral-200;
+    }
 
     .icon-wrap {
       display: flex;

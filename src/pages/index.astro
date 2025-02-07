@@ -7,6 +7,9 @@ import { Image } from "astro:assets";
 
 // styles
 import "../styles/pages/_index.scss";
+import Button from "../components/Button.astro";
+
+// assets
 ---
 
 <Layout
@@ -19,23 +22,79 @@ import "../styles/pages/_index.scss";
       <div class="container wrapper">
         <div class="hero-text">
           <div class="section-label">
-            Website Design <span style="color: #8e8b7e64; margin-inline: 2px;"
+            Website Design <span
+              style="color: #8e8b7e4b; margin-inline: 2px; font-size: 20px;"
               >|</span
-            > Branding <span style="color: #8e8b7e64; margin-inline: 2px;"
+            > Branding <span
+              style="color: #8e8b7e4b; margin-inline: 2px; font-size: 20px;"
               >|</span
             > Digital Marketing
           </div>
-          <h1 class="font-header-1 text-center">
+          <h1 class="font-header-1 text-center hero-headline">
             We Offer Digital Solutions with a <span class="highlight-bg"
               ><span class="highlight-text">Modern</span></span
             > Outlook
           </h1>
         </div>
-      </div>
-      <div class="three-wrapper">
-        <div class="three-overlay"></div>
+
+        <div class="hero-btns">
+          <Button
+            href="/contact"
+            class="btn-primary"
+            text="Launch a project"
+            icon="launch"
+          />
+          <Button
+            href="/contact"
+            class="btn-secondary"
+            text="Previous works"
+            icon="double-down"
+          />
+        </div>
+
+        <div class="hero-bottom">
+          <div class="hero-socials">
+            <div class="socials-header">
+              <span class="dot"></span>
+              <p>Follow Our Socials</p>
+            </div>
+            <div class="socials-wrapper">
+              <Icon name="instagram" width="30" height="30" />
+              <Icon name="tiktok" width="30" height="30" />
+              <Icon name="facebook" width="30" height="30" />
+              <Icon name="dribbble" width="30" height="30" />
+              <Icon name="behance" width="30" height="30" />
+            </div>
+          </div>
+          <div class="hero-sub-headline">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="41"
+              height="40"
+              fill="none"
+              class="glowing-logo"
+            >
+              <path
+                fill="#FBD50A"
+                d="M6.12 12.188a3.394 3.394 0 0 1-.983.045A3.457 3.457 0 0 1 2.089 9.43a3.47 3.47 0 0 1 2.74-4.058c.468-.09.934-.079 1.371.015A3.473 3.473 0 0 1 8.473 7.07c.181.322.314.68.386 1.06a3.47 3.47 0 0 1-2.74 4.059h.001ZM35.108 35.331a4.457 4.457 0 0 1-2.693-.32 4.527 4.527 0 0 1-2.11-1.961l-.02-.042a4.517 4.517 0 0 1-.449-1.283c-.466-2.462 1.14-4.837 3.584-5.306a4.428 4.428 0 0 1 1.793.02l.077.016.045.012a4.52 4.52 0 0 1 2.872 2.2c.025.044.047.087.071.132a4.593 4.593 0 0 1 .417 1.225c.466 2.46-1.139 4.837-3.584 5.306l-.003.001ZM30.197 34.278a16.82 16.82 0 0 1-7.038 2.787c-8.486 1.333-16.68-4.087-19-12.357-1.061-3.699-.86-7.759.58-11.328l.11-.264a.102.102 0 0 0-.076-.141 4.233 4.233 0 0 1-2.713-1.687.101.101 0 0 0-.173.012c-.123.245-.234.496-.34.75-2.081 4.896-2.062 10.634.055 15.514 3.601 8.446 12.725 13.274 21.676 11.614a19.713 19.713 0 0 0 8.377-3.671m8.718-15.689C40.324 8.82 31.123-.274 20.183.006 15.7.096 11.245 1.74 7.877 4.723l-.005.005c-.084.082-.166.166-.247.25a.101.101 0 0 0 .022.159c.502.304.939.71 1.275 1.187.004.005.007.009.009.014.524-.366 1.036-.746 1.572-1.095 11.48-7.307 26.456.85 26.37 14.575-.04 2.043-.239 4.066-.9 5.921a.1.1 0 0 0 .062.129 5.27 5.27 0 0 1 2.433 1.79c.046.062.143.048.174-.024 1.021-2.486 1.764-5.11 1.728-7.817l.004.001Z"
+              ></path>
+              <path
+                fill="#FBD50A"
+                d="M7.411 18.71c.512-6.034 5.172-10.88 11.1-11.632.474 1.34.643 2.785.43 4.182-.683 4.476-4.15 7.704-8.618 7.864-.965.034-1.949-.189-2.913-.414h.001ZM19.174 32.62c-5.966-.442-10.793-5.012-11.667-10.883a9.106 9.106 0 0 1 7.378.736c3.552 2.024 5.275 6.245 4.29 10.147ZM21.157 10.298c-.11-1.11.044-2.187.355-3.246 3.806.414 7.11 2.514 9.161 5.54l.015.02c.065.098.132.196.193.296l.004.005.068.11.026.041.095.158.06.101a.53.53 0 0 1 .02.035l.115.2c0 .003.002.006.005.01l.138.255.006.01.071.138c.024.045.046.093.07.14a12.713 12.713 0 0 1 .475 1.087c.027.074.056.148.082.222.034.09.065.184.097.276.017.045.031.091.046.14.012.037.026.075.036.113l.019.06a60.262 60.262 0 0 1 .13.445l.04.158.038.15c.012.051.026.103.036.154.024.103.046.208.068.311l.026.126.01.053.053.292v.002c.017.103.033.206.048.31l.04.313c-1.993.614-4.196.552-6.158-.335-3.316-1.496-5.126-4.073-5.485-7.695l-.003.005ZM32.813 21.179a12.592 12.592 0 0 1-.352 1.923l-.072.264a4.078 4.078 0 0 1-.048.163 9.991 9.991 0 0 1-.227.686 78.13 78.13 0 0 1-.051.14l-.034.087c-.05.132-.104.264-.159.393l-.051.12a13.533 13.533 0 0 1-.7 1.378c-1.938 3.303-5.304 5.657-9.243 6.201a9.245 9.245 0 0 1-.263-4.118c.748-4.577 4.757-7.735 9.149-7.57.684.026 1.37.166 2.047.333"
+              ></path>
+            </svg>
+            <p class="sub-headline">
+              We make businesses (like yours) shine with innovative solutions
+              and help them stand out in the digital landscape, all from our
+              base in Addis Ababa, Ethiopia.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
+    <div class="three-wrapper">
+      <div class="three-overlay"></div>
+    </div>
   </main>
 
   <script src="../scripts/script.js"></script>
