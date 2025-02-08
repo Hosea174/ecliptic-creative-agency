@@ -15,6 +15,7 @@ import glow1 from "../assets/glow-1.svg";
 import glow2 from "../assets/glow-2.svg";
 import glow3 from "../assets/glow-3.svg";
 import shape1 from "../assets/abstract-shape-1.png";
+import pillar from "../assets/pillar.png";
 ---
 
 <Layout
@@ -165,6 +166,36 @@ import shape1 from "../assets/abstract-shape-1.png";
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="philosophy-section">
+      <div class="container wrapper">
+        <div class="philosophy-header">
+          <div class="section-label">
+            <span class="dot"></span> Our services
+          </div>
+          <h2 class="font-header-2 text-center">
+            Our Three <span class="font-accent-2">Pillars</span> Of Success
+          </h2>
+        </div>
+
+        <div class="philosophies-box">
+          <Image src={pillar} alt="" class="pillar-img" />
+          <Image src={pillar} alt="" class="pillar-img" />
+          <Image src={pillar} alt="" class="pillar-img" />
+        </div>
+
+        <!-- <div class="text-center | philosophy integrity">
+          <span class="philosophy-no font-accent-1">01</span>
+          <h3 class="philosophy-name font-accent-1">Integrity</h3>
+          <p class="sub-headline">
+            We build trust through transparency and honesty, ensuring that our
+            clients are always informed and confident in our process
+          </p>
+        </div> -->
+
+        <Image src={glow3} alt="" class="glow-3" />
       </div>
     </section>
   </main>
