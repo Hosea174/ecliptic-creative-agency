@@ -339,13 +339,25 @@ function animate() {
     // console.log(isMouseNearSphere);
     // console.log(isMouseOverScene);
     if (isMouseOverScene && isMouseNearSphere) {
-      // Apply magnetic effect only when mouse is near
-      mesh.position.lerp(targetPosition, 0.05);
+      // Apply magnetic effect with easing when mouse is near
+      gsap.to(mesh.position, {
+        x: targetPosition.x,
+        y: targetPosition.y,
+        z: targetPosition.z,
+        duration: 0.8, // Adjust duration for smoother effect
+        ease: "power2.out", // Add easing for smoother transition
+      });
       console.log(`from if mouse block ${JSON.stringify(targetPosition)}`);
     } else {
-      // Return to center
+      // Return to center with easing
+      gsap.to(mesh.position, {
+        x: initialPosition.x,
+        y: initialPosition.y,
+        z: initialPosition.z,
+        duration: 0.6, // Adjust duration for smoother return
+        ease: "power2.out", // Add easing for smoother transition
+      });
       console.log(`from else block ${JSON.stringify(initialPosition)}`);
-      mesh.position.lerp(initialPosition, 0.03);
     }
 
     // Continue rotation

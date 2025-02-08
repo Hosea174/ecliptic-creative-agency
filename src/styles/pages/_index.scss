@@ -1,6 +1,23 @@
 @use '../variables' as *;
 
+
+.glow-1 {
+  position: absolute;
+  top: 8rem;
+  right: 0;
+  z-index: -999;
+}
+
+.glow-2 {
+  position: absolute;
+  top: 15rem;
+  left: 02rem;
+  z-index: -9999;
+}
+
 .hero-section {
+  margin-block-end: 10rem;
+
   .wrapper {
     margin-top: 9rem;
 
@@ -42,6 +59,8 @@
       gap: 8px;
       margin-inline: auto;
       width: fit-content;
+      position: relative;
+      z-index: 999;
     }
 
     .hero-bottom {
@@ -93,7 +112,7 @@
 .three-wrapper {
   margin-top: -1.8rem;
   position: absolute;
-  top: 27.5rem;
+  top: 28rem;
 
   .three-overlay {
     position: absolute;
@@ -101,11 +120,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
     width: 550px;
     height: 550px;
-    background: #fdd90da7;
-    filter: blur(180px);
+    background: #fdd90d3d;
+    filter: blur(90px);
   }
 
   @media screen and (max-width: 768px) {
@@ -113,6 +131,19 @@
       width: 300px;
       height: 300px;
       filter: blur(130px);
+    }
+  }
+}
+
+.about-section {
+  .wrapper {
+    .about-text {
+      margin-block: 21px 23px;
+      max-width: 715px;
+      color: $clr-neutral-600;
+      font-size: 30px;
+      line-height: 44px;
+      letter-spacing: -0.9px;
     }
   }
 }

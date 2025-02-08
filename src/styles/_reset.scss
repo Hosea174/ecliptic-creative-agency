@@ -31,8 +31,12 @@ html {
 
 html,
 body {
-  height: 100%;
+  height: fit-content;
   overflow-x: hidden;
+}
+
+main {
+  height: fit-content;
 }
 
 // Set core body defaults
@@ -71,5 +75,5 @@ canvas {
 
 main,
 p {
-  overflow: hidden;
+  // overflow: hidden;
 }

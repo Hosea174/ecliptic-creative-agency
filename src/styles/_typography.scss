@@ -31,6 +31,14 @@
   font-weight: 650;
 }
 
+@font-face {
+  font-family: 'Swear Display';
+  src: url('/fonts/swear-display-medium.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+}
+
 body {
   font-family: $ff-body;
   font-size: $fs-body;
@@ -64,12 +72,20 @@ body {
   font-weight: $fw-semi-bold;
 }
 
-
 .sub-headline {
   color: $clr-neutral-300;
   font-weight: 400;
   line-height: 156%;
   letter-spacing: 0.32px;
+}
+
+.accent-font-1 {
+  color: #FFF;
+  font-family: "Swear Display";
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: -0.35px;
 }
 
 @media (max-width: 960px) {
@@ -83,6 +99,5 @@ body {
   .font-header-1 {
     line-height: 32px;
   }
-
 
 }
