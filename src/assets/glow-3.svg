@@ -1,0 +1,40 @@
+<svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1440"
+            height="1465"
+            fill="none"
+            ><g filter="url(#a)"
+              ><path
+                fill="url(#b)"
+                fill-opacity=".7"
+                d="M1238 632.034c0 114.621-43.45 418.966-197 418.966-153.551 0-723-245.27-723-359.891C318 576.487 420.42 414 573.972 414 727.524 414 1238 517.412 1238 632.034Z"
+              ></path></g
+            ><defs
+              ><linearGradient
+                id="b"
+                x1="447.123"
+                x2="1012.07"
+                y1="516.604"
+                y2="1038.56"
+                gradientUnits="userSpaceOnUse"
+                ><stop stop-color="#FCC60A"></stop><stop
+                  offset="1"
+                  stop-color="#FFA90A"></stop></linearGradient
+              ><filter
+                id="a"
+                width="1748"
+                height="1465"
+                x="-96"
+                y="0"
+                color-interpolation-filters="sRGB"
+                filterUnits="userSpaceOnUse"
+                ><feFlood flood-opacity="0" result="BackgroundImageFix"
+                ></feFlood><feBlend
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"></feBlend><feGaussianBlur
+                  result="effect1_foregroundBlur_963_2855"
+                  stdDeviation="207"></feGaussianBlur></filter
+              ></defs
+            ></svg
+          >

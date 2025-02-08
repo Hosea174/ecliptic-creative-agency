@@ -2,6 +2,7 @@
 // components
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import CircleButton from "../components/CircleButton.astro";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
@@ -12,6 +13,8 @@ import Button from "../components/Button.astro";
 // assets
 import glow1 from "../assets/glow-1.svg";
 import glow2 from "../assets/glow-2.svg";
+import glow3 from "../assets/glow-3.svg";
+import shape1 from "../assets/abstract-shape-1.png";
 ---
 
 <Layout
@@ -104,12 +107,12 @@ import glow2 from "../assets/glow-2.svg";
       <div class="container wrapper">
         <div class="section-label"><span class="dot"></span> Who are we?</div>
         <h2 class="about-text fw-semi-bold">
-          We are a tight-knit crew of <span class="accent-font-1"
+          We are a tight-knit crew of <span class="font-accent-1"
             >creative minds</span
           >, specializing in bringing brands to life through <span
-            class="accent-font-1">standout designs</span
-          >, <span class="accent-font-1">content creation</span> and
-          <span class="accent-font-1">strategic digital marketing</span> that connects
+            class="font-accent-1">standout designs</span
+          >, <span class="font-accent-1">content creation</span> and
+          <span class="font-accent-1">strategic digital marketing</span> that connects
           and inspires.
         </h2>
         <Button
@@ -118,14 +121,57 @@ import glow2 from "../assets/glow-2.svg";
           text="About Ecliptic"
           icon="spark"
         />
-        <div
-          class="box"
-          style="border: 1px solid rgba(255, 255, 255, 0); width: 100%; height: 1900px;"
-        >
+      </div>
+    </section>
+    <section class="services-section">
+      <div class="container wrapper">
+        <div class="services-header">
+          <div class="section-label">
+            <span class="dot"></span> Our services
+          </div>
+          <h2 class="font-header-2 text-center">
+            An <span class="font-accent-2">All-In-One</span> Digital Solution for
+            Business Owners
+          </h2>
+        </div>
+
+        <Image src={glow3} alt="" class="glow-3" />
+
+        <div class="services-box">
+          <div class="service web-design">
+            <div class="col-1">
+              <h3 class="font-header-3 font-accent-2 accent-gradient">
+                Website Design & Development
+              </h3>
+              <CircleButton
+                text1="Explore"
+                text2="Service"
+                href="/"
+                class="circle-btn-primary"
+              />
+            </div>
+            <div class="col-2">
+              <Image
+                src={shape1}
+                alt="Abstract Shape 1"
+                class="abstract-shape"
+              />
+              <p class="sub-headline">
+                Ecliptic Agency is focused on legendary results. Through our
+                refined budget optimization model, we'll ensure each and every
+                dollar spent effectively translates to a strong ROI. Goodbye
+                budget bloat!
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-
-    <script src="../scripts/script.js"></script>
   </main>
+  <div
+    class="box"
+    style="border: 1px solid rgba(255, 255, 255, 0); width: 100%; height: 1900px;"
+  >
+    <script src="../scripts/script.js"></script>
+  </div>
 </Layout>

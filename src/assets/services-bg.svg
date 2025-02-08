@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1241" fill="none">
+  <path fill="#040404" d="M0 1241V0c183.473 41.998 438.295 68.025 720 68.025 281.71 0 536.53-26.027 720-68.025v1241c-183.47-42-438.29-68.02-720-68.02-281.705 0-536.527 26.02-720 68.02Z"/>
+  <path stroke="url(#a)" stroke-opacity=".25" stroke-width="2" d="M1440.28 221.96.279 639.96"/>
+  <path stroke="url(#b)" stroke-opacity=".25" stroke-width="2" d="M1440.58 477.815 453.578 1177.82"/>
+  <path stroke="url(#c)" stroke-opacity=".25" stroke-width="2" d="M.428 493.096 1449.43 1179.1"/>
+  <path stroke="url(#d)" stroke-opacity=".25" stroke-width="2" d="m123.555 28.168 1316.995 878"/>
+  <path stroke="url(#e)" stroke-opacity=".25" stroke-width="2" d="m-.381 362.075 703-290"/>
+  <path stroke="url(#f)" stroke-opacity=".25" stroke-width="2" d="M-.653 1041.24 1149.35 49.243"/>
+  <defs>
+    <linearGradient id="a" x1="1439.86" x2="-.139" y1="220.52" y2="638.52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBD50A" stop-opacity=".3"/>
+      <stop offset=".499" stop-color="#FBD50A"/>
+      <stop offset="1" stop-color="#FBD50A" stop-opacity=".3"/>
+    </linearGradient>
+    <linearGradient id="b" x1="1439.71" x2="452.711" y1="476.592" y2="1176.59" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBD50A" stop-opacity=".3"/>
+      <stop offset=".499" stop-color="#FBD50A"/>
+      <stop offset="1" stop-color="#FBD50A" stop-opacity=".3"/>
+    </linearGradient>
+    <linearGradient id="c" x1="-.214" x2="1448.79" y1="494.452" y2="1180.45" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBD50A" stop-opacity=".3"/>
+      <stop offset=".499" stop-color="#FBD50A"/>
+      <stop offset="1" stop-color="#FBD50A" stop-opacity=".3"/>
+    </linearGradient>
+    <linearGradient id="d" x1="122.723" x2="1439.72" y1="29.416" y2="907.416" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBD50A" stop-opacity=".3"/>
+      <stop offset=".499" stop-color="#FBD50A"/>
+      <stop offset="1" stop-color="#FBD50A" stop-opacity=".3"/>
+    </linearGradient>
+    <linearGradient id="e" x1=".191" x2="703.191" y1="363.462" y2="73.462" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBD50A" stop-opacity=".3"/>
+      <stop offset=".499" stop-color="#FBD50A"/>
+      <stop offset="1" stop-color="#FBD50A" stop-opacity=".3"/>
+    </linearGradient>
+    <linearGradient id="f" x1=".327" x2="1150.33" y1="1042.38" y2="50.379" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBD50A" stop-opacity=".3"/>
+      <stop offset=".499" stop-color="#FBD50A"/>
+      <stop offset="1" stop-color="#FBD50A" stop-opacity=".3"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,56 @@
+@use '../variables' as *;
+
+.circle-btn-link {
+
+  .circle-btn {
+    position: relative;
+    line-height: 23px;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 0;
+      width: 115px;
+      height: 115px;
+      border-radius: 50%;
+    }
+
+    &.circle-btn-primary {
+      color: $clr-primary-400;
+      border: 1px solid $clr-primary-400;
+
+      &::before {
+        border: 1px solid #B19E3C;
+      }
+    }
+    
+    &.circle-btn-secondary {
+      color: #060606;
+      border: 1px solid #060606;
+      &::before {
+        border: 1px solid #828076;
+      }
+    }
+
+    .text-1 {
+      margin-right: 13px;
+    }
+
+    .text-2 {
+      margin-left: 13px;
+    }
+  }
+}

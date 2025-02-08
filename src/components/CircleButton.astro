@@ -1,0 +1,18 @@
+---
+
+interface Props {
+  text1: string;
+  text2: string;
+  href: string;
+  class?: string;
+}
+
+const { text1, text2, href, class: className } = Astro.props;
+---
+
+<a href={href} class="circle-btn-link">
+  <button class:list={["circle-btn", className]}>
+    <span class="text-1">{text1}</span>
+    <span class="text-2">{text2}</span>
+  </button>
+</a>

@@ -56,11 +56,10 @@ body {
 
 .font-header-2 {
   font-family: $ff-header;
-  font-size: 1.25rem;
-  font-size: clamp(1.25rem, 1.190721649484536rem + 0.25773195876288657vw, $fs-h2);
-  color: $clr-neutral-900;
-  line-height: normal;
-  font-weight: $fw-semi-bold;
+  font-size: 52px;
+  color: $clr-neutral-100;
+  line-height: 64px;
+  font-weight: $fw-regular;
   overflow: hidden;
 }
 
@@ -74,18 +73,35 @@ body {
 
 .sub-headline {
   color: $clr-neutral-300;
-  font-weight: 400;
+  font-weight: $fw-regular;
   line-height: 156%;
   letter-spacing: 0.32px;
 }
 
-.accent-font-1 {
+.font-accent-1 {
   color: #FFF;
   font-family: "Swear Display";
   font-size: 35px;
-  font-weight: 600;
+  font-weight: $fw-bold;
   line-height: 44px;
   letter-spacing: -0.35px;
+
+}
+
+.font-accent-2 {
+  color: #FFF;
+  font-family: "Swear Display";
+  font-size: 54px;
+  font-weight: $fw-bold-2;
+  line-height: 64px;
+  letter-spacing: 1.08px;
+
+  &.accent-gradient {
+    background: linear-gradient(90deg, #FBD50A 0%, #FF7A0A 121.65%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 @media (max-width: 960px) {

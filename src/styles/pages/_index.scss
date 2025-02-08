@@ -16,7 +16,7 @@
 }
 
 .hero-section {
-  margin-block-end: 10rem;
+  margin-block-end: 11rem;
 
   .wrapper {
     margin-top: 9rem;
@@ -138,12 +138,113 @@
 .about-section {
   .wrapper {
     .about-text {
-      margin-block: 21px 23px;
+      margin-block: 21px 25px;
       max-width: 715px;
       color: $clr-neutral-600;
       font-size: 30px;
       line-height: 44px;
       letter-spacing: -0.9px;
+    }
+  }
+}
+
+.services-section {
+  margin-block: 8.5rem;
+  padding-block: 1rem;
+  background-image: url("../../assets/services-bg.svg");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 1300px;
+
+  .wrapper {
+    padding-block: 10rem;
+    position: relative;
+
+    .services-header {
+      max-width: 800px;
+      margin-inline: auto;
+
+      .section-label {
+        margin-inline: auto;
+      }
+
+      h2 {
+        margin-block: 21px 38px;
+      }
+    }
+
+    .glow-3 {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(180px);
+    }
+
+    .services-box {
+      .service {
+        position: relative;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 54px 50px;
+        max-width: 1110px;
+        height: 572px;
+        border-radius: 35px;
+        background: rgba(49, 42, 30, 0.514);
+        box-shadow: 3px 4px 44px 0px rgba(35, 34, 32, 0.26);
+        backdrop-filter: blur(87px);
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -20px;
+          right: -20px;
+          width: 513px;
+          height: 513px;
+          border-radius: 513px;
+          background: linear-gradient(143deg, rgba(252, 200, 10, 0.737) 21.49%, rgba(246, 189, 4, 0.7) 70.05%);
+          filter: blur(180px);
+          z-index: -10;
+        }
+
+        .col-1,
+        .col-2 {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        .col-1 {
+          max-width: 480px;
+        }
+
+        .col-2 {
+          max-width: 460px;
+
+          .abstract-shape {
+            width: 295px;
+            height: auto;
+            mix-blend-mode: luminosity;
+            filter: saturate(0.2);
+          }
+
+          .sub-headline {
+            border-image: linear-gradient(90deg, #FBD50A 0%, #FF7A0A 131.19%) 1;
+            border-width: 2px;
+            border-style: solid;
+            padding-top: 12px;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+
+            color: $clr-neutral-300;
+            line-height: 25px;
+          }
+        }
+      }
+
     }
   }
 }
