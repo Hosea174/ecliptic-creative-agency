@@ -149,7 +149,7 @@
 }
 
 .services-section {
-  margin-block: 8.5rem;
+  margin-block: 8.5rem 6rem;
   padding-block: 1rem;
   background-image: url("../../assets/services-bg.svg");
   background-position: center;
@@ -322,6 +322,69 @@
         margin-inline: auto;
         max-width: 600px;
       }
+    }
+  }
+}
+
+.design-portfolio-section {
+  margin-block: 9rem 4rem;
+  background-color: #F0EEE2;
+  // height: 2000px;
+
+  .wrapper {
+    position: relative;
+    padding-block: 140px 60px;
+    color: $clr-neutral-900;
+
+    .marquee-wrap {
+      position: absolute;
+      top: 44px;
+      left: 0;
+
+      display: flex;
+      gap: 19px;
+      font-size: 55px;
+      white-space: nowrap;
+      align-items: center;
+
+      h2.font-accent-2 {
+        font-size: 58px;
+        color: $clr-neutral-900;
+      }
+
+      .slogan-1 {
+        font-family: $ff-header;
+      }
+
+      .slogan-2 {
+        font-family: $ff-body;
+      }
+    }
+
+    .portfolio-header {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        margin-top: .25rem;
+        max-width: 640px;
+      }
+    }
+
+    .portfolio-projects {
+      margin-block-start: 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+
+      .project-card:nth-child(even) {
+        transform: translateY(6.5rem);
+      }
+    }
+
+    .circle-btn-secondary {
+      margin-inline: auto;
+      margin-top: 10rem;
     }
   }
 }

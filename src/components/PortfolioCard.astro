@@ -1,0 +1,44 @@
+---
+// components
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+
+interface Props {
+  imgSrc: ImageMetadata;
+  title: string;
+  href: string;
+  tags: Array<string>;
+}
+const { imgSrc, title, href, tags } = Astro.props;
+
+const tagColors = {
+  "web design": "#E5D7E4",
+  "web development": "#DAE5D7",
+  branding: "#4CAF50",
+  "mobile app": "#FFC107",
+};
+---
+
+<div class="project-card">
+  <div class="img-wrapper">
+    <Image src={imgSrc} alt={title} />
+  </div>
+  <div class="card-meta">
+    <div class="project-tags">
+      {
+        tags.map((tag) => (
+          <span class="tag" style={{ backgroundColor: tagColors[tag] }}>
+            {tag}
+          </span>
+        ))
+      }
+    </div>
+    <a {href} class="live-link">
+      <Icon name="view" width={18} />
+      <span>Live Demo</span>
+    </a>
+  </div>
+  <a {href}>
+    <h3 class="project-name">{title} <Icon name="arrow-link" width={23}/></h3>
+  </a>
+</div>

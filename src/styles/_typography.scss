@@ -2,6 +2,13 @@
 
 @font-face {
   font-family: 'Manrope';
+  src: url('/fonts/manrope-extrabold.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Manrope';
   src: url('/fonts/manrope-regular.woff') format('woff');
   font-style: normal;
   font-display: swap;

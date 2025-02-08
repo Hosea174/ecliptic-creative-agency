@@ -3,6 +3,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import CircleButton from "../components/CircleButton.astro";
+import PortfolioCard from "../components/PortfolioCard.astro";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
@@ -14,8 +15,15 @@ import Button from "../components/Button.astro";
 import glow1 from "../assets/glow-1.svg";
 import glow2 from "../assets/glow-2.svg";
 import glow3 from "../assets/glow-3.svg";
+import element1 from "../assets/element-1.svg";
+import element2 from "../assets/element-2.svg";
+import element3 from "../assets/element-3.svg";
 import shape1 from "../assets/abstract-shape-1.png";
 import pillar from "../assets/pillar.png";
+import projectPactzion from "../assets/project-pactzion.png";
+import projectAgn from "../assets/project-agn.png";
+import projectAhadu from "../assets/project-ahadu.png";
+import projectFinease from "../assets/project-finease.png";
 ---
 
 <Layout
@@ -196,6 +204,73 @@ import pillar from "../assets/pillar.png";
         </div> -->
 
         <Image src={glow3} alt="" class="glow-3" />
+      </div>
+    </section>
+
+    <section class="design-portfolio-section">
+      <div class="container wrapper">
+        <div class="marquee-wrap">
+          <p class="slogan-1">Redefining The Norm</p>
+          <Image src={element1} alt="" class="element-1" />
+          <h2 class="font-accent-2">Previous Design Works</h2>
+          <Image src={element2} alt="" class="element-2" />
+          <p class="slogan-2 fw-bold">Redefining The Norm</p>
+        </div>
+        <div class="portfolio-header">
+          <div class="portfolio-subheadline">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="629"
+              height="9"
+              fill="none"
+              ><path
+                fill="#6D6D6D"
+                d="M0 4.5a4 4 0 1 0 8 0 4 4 0 0 0-8 0Zm621 0a4 4 0 1 0 8 0 4 4 0 0 0-8 0ZM4 5.25h621v-1.5H4v1.5Z"
+              ></path></svg
+            >
+            <p>
+              We are experts in web design, branding, and digital
+              marketing—turning ideas into experiences that captivate and
+              convert. Our portfolio showcases work that's bold, strategic, and
+              built for impact. Explore how we've helped brands stand out in a
+              crowded digital world.
+            </p>
+          </div>
+          <Image src={element3} alt="" class="element-3" />
+        </div>
+        <div class="portfolio-projects">
+          <PortfolioCard
+            imgSrc={projectPactzion}
+            title="PactZion Trading P.L.C"
+            href="/"
+            tags={["web design", "web development"]}
+          />
+          <PortfolioCard
+            imgSrc={projectAgn}
+            title="Ahadu Global Network"
+            href="/"
+            tags={["web design", "web development"]}
+          />
+          <PortfolioCard
+            imgSrc={projectAhadu}
+            title="Ahadu Radio FM 94.3"
+            href="/"
+            tags={["web design", "web development"]}
+          />
+          <PortfolioCard
+            imgSrc={projectFinease}
+            title="PactZion Trading"
+            href="/"
+            tags={["web design"]}
+          />
+        </div>
+
+        <CircleButton
+          text1="View All"
+          text2="Projects"
+          href="/"
+          class="circle-btn-secondary"
+        />
       </div>
     </section>
   </main>
