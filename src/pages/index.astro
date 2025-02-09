@@ -15,9 +15,14 @@ import Button from "../components/Button.astro";
 import glow1 from "../assets/glow-1.svg";
 import glow2 from "../assets/glow-2.svg";
 import glow3 from "../assets/glow-3.svg";
+import glow4 from "../assets/glow-4.svg";
 import element1 from "../assets/element-1.svg";
 import element2 from "../assets/element-2.svg";
 import element3 from "../assets/element-3.svg";
+import resultsIcon from "../icons/results-icon.svg";
+import roiIcon from "../icons/roi-icon.svg";
+import clientIcon from "../icons/client-icon.svg";
+import executionIcon from "../icons/execution-icon.svg";
 import shape1 from "../assets/abstract-shape-1.png";
 import pillar from "../assets/pillar.png";
 import projectPactzion from "../assets/project-pactzion.png";
@@ -28,6 +33,7 @@ import thumbnail1 from "../assets/thumbnail-1.png";
 import thumbnail2 from "../assets/thumbnail-2.png";
 import thumbnail3 from "../assets/thumbnail-3.png";
 import thumbnail4 from "../assets/thumbnail-4.png";
+import whiteHand from "../assets/white-hand.png";
 ---
 
 <Layout
@@ -306,19 +312,81 @@ import thumbnail4 from "../assets/thumbnail-4.png";
 
         <div class="videos-showcase">
           <div class="video-project">
-            <Image src={thumbnail1} alt="video alt"/>
+            <Image src={thumbnail1} alt="video alt" />
           </div>
           <div class="video-project">
-            <Image src={thumbnail2} alt="video alt"/>
+            <Image src={thumbnail2} alt="video alt" />
           </div>
           <div class="video-project">
-            <Image src={thumbnail3} alt="video alt"/>
+            <Image src={thumbnail3} alt="video alt" />
           </div>
           <div class="video-project">
-            <Image src={thumbnail4} alt="video alt"/>
+            <Image src={thumbnail4} alt="video alt" />
           </div>
         </div>
         <Image src={glow3} alt="" class="glow-3" />
+      </div>
+    </section>
+
+    <section class="why-us-section">
+      <div class="container wrapper">
+        <div class="why-us">
+          <div class="why-col-1">
+            <div class="section-label">
+              <span class="dot"></span> Why Us
+            </div>
+            <h2 class="font-header-2">
+              Reasons You Will Be <span class="font-accent-2">Thrilled</span> You
+              Partnered With Us...
+            </h2>
+            <div class="reasons-box">
+              <div class="reason">
+                <div class="reason-icon">
+                  <Image src={resultsIcon} alt="" />
+                </div>
+                <h3>Results-Driven Creativity</h3>
+                <p>
+                  We blend strategy and design to create work that makes an
+                  impact, ensuring every project delivers real value.
+                </p>
+              </div>
+              <div class="reason">
+                <div class="reason-icon">
+                  <Image src={roiIcon} alt="" />
+                </div>
+                <h3>High Return-On-Investment</h3>
+                <p>
+                  We create solutions that maximize your investment and drive
+                  measurable growth without too much upfront risk.
+                </p>
+              </div>
+              <div class="reason">
+                <div class="reason-icon">
+                  <Image src={clientIcon} alt="" />
+                </div>
+                <h3>Client-Centric Approach</h3>
+                <p>
+                  Your success is our priority. We collaborate closely,
+                  tailoring solutions that align with your goals and vision.
+                </p>
+              </div>
+              <div class="reason">
+                <div class="reason-icon">
+                  <Image src={executionIcon} alt="" />
+                </div>
+                <h3>Seamless Execution</h3>
+                <p>
+                  From concept to completion, we handle every detail with
+                  precision—delivering high-quality work on time, every time.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="why-col-2">
+            <Image src={whiteHand} alt="White Hand" class="white-hand" />
+          </div>
+        </div>
+        <Image src={glow4} alt="" class="glow-4" />
       </div>
     </section>
   </main>
