@@ -24,6 +24,10 @@ import projectPactzion from "../assets/project-pactzion.png";
 import projectAgn from "../assets/project-agn.png";
 import projectAhadu from "../assets/project-ahadu.png";
 import projectFinease from "../assets/project-finease.png";
+import thumbnail1 from "../assets/thumbnail-1.png";
+import thumbnail2 from "../assets/thumbnail-2.png";
+import thumbnail3 from "../assets/thumbnail-3.png";
+import thumbnail4 from "../assets/thumbnail-4.png";
 ---
 
 <Layout
@@ -271,6 +275,50 @@ import projectFinease from "../assets/project-finease.png";
           href="/"
           class="circle-btn-secondary"
         />
+      </div>
+    </section>
+    <section class="marketing-portfolio">
+      <div class="container wrapper">
+        <div class="marketing-header">
+          <div class="section-label">
+            <span class="dot"></span> Digital Mwrketing
+          </div>
+          <h2 class="font-header-2 text-center">
+            We run marketing campaigns that deliver <span class="font-accent-2"
+              >Unparalleled leads.</span
+            >
+          </h2>
+          <div class="marketing-btns">
+            <Button
+              href="/contact"
+              class="btn-primary"
+              text="View Our Works"
+              icon="launch"
+            />
+            <Button
+              href="/contact"
+              class="btn-secondary"
+              text="Learn More"
+              icon="double-down"
+            />
+          </div>
+        </div>
+
+        <div class="videos-showcase">
+          <div class="video-project">
+            <Image src={thumbnail1} alt="video alt"/>
+          </div>
+          <div class="video-project">
+            <Image src={thumbnail2} alt="video alt"/>
+          </div>
+          <div class="video-project">
+            <Image src={thumbnail3} alt="video alt"/>
+          </div>
+          <div class="video-project">
+            <Image src={thumbnail4} alt="video alt"/>
+          </div>
+        </div>
+        <Image src={glow3} alt="" class="glow-3" />
       </div>
     </section>
   </main>
