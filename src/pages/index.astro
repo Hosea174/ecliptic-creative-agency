@@ -2,6 +2,7 @@
 // components
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import CircleButton from "../components/CircleButton.astro";
 import PortfolioCard from "../components/PortfolioCard.astro";
 import { Icon } from "astro-icon/components";
@@ -39,7 +40,7 @@ import whiteHand from "../assets/white-hand.png";
 ---
 
 <Layout
-  title="Ecliptic Creative Agency - Home"
+  title="Home - Ecliptic Creative Agency"
   description="A full service creative agency based in Addis Ababa, Ethiopia, and serving clients worldwide."
 >
   <Header />
@@ -418,10 +419,7 @@ import whiteHand from "../assets/white-hand.png";
       </div>
     </section>
   </main>
-  <div
-    class="box"
-    style="border: 1px solid rgba(255, 255, 255, 0); width: 100%; height: 300px;"
-  >
-    <script src="../scripts/script.js"></script>
-  </div>
+  <Footer />
+
+  <script src="../scripts/script.js"></script>
 </Layout>

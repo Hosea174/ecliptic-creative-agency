@@ -1,1 +1,47 @@
 @use '../variables' as *;
+
+footer .wrapper {
+  margin-block-start: 10.5rem;
+  padding-bottom: 1.5rem;
+  background-image: url("../assets/footer-glow.svg");
+  background-size: cover;
+
+  .ecliptic-xl {
+    width: 100%;
+  }
+
+  .ftr-nav {
+    margin-block-start: 5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.80);
+
+    .ftr-left {
+      display: flex;
+      gap: 21px;
+      align-items: center;
+
+      .ftr-menu {
+        display: flex;
+        gap: 25px;
+      }
+
+    }
+
+    .ftr-right {
+      .ftr-socials {
+        display: flex;
+        gap: 25px;
+      }
+
+      p.copyright {
+        margin-top: 3px;
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        text-align: right;
+      }
+    }
+  }
+}
