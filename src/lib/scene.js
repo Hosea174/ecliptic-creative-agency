@@ -21,7 +21,7 @@ export async function initScene(renderer) {
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(
     45,
-    window.innerWidth / window.innerHeight,
+    window.innerWidth / (window.innerHeight + 200),
     0.1,
     2000
   );
@@ -79,14 +79,14 @@ export async function initScene(renderer) {
   composer.addPass(effectPass);
 
   // Position the camera
-  camera.position.set(0, 0, 14);
+  camera.position.set(0, 0, 18);
   camera.lookAt(0, 0, 0);
 
   window.addEventListener("resize", () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.aspect = window.innerWidth / (window.innerHeight + 200);
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    composer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight + 200);
+    composer.setSize(window.innerWidth, window.innerHeight + 200);
     createSphere(); // Recreate the sphere on resize
   });
 
@@ -100,7 +100,12 @@ export async function initScene(renderer) {
   } = setupControls(mesh, camera, renderer);
 
   // Setup scroll animation
-  setupScrollAnimation(mesh, camera, updateOverlayPosition, getInitialPosition());
+  setupScrollAnimation(
+    mesh,
+    camera,
+    updateOverlayPosition,
+    getInitialPosition()
+  );
 
   // Start animation loop
   const clock = new THREE.Clock();

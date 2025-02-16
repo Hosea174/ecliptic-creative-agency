@@ -16,7 +16,7 @@
 }
 
 .hero-section {
-  margin-block-end: 11rem;
+  margin-block-end: 9rem;
 
   .wrapper {
     margin-top: 9rem;
@@ -113,7 +113,8 @@
 .three-wrapper {
   margin-top: -1.8rem;
   position: absolute;
-  top: 28rem;
+  top: 21rem;
+  z-index: -10;
 
   .three-overlay {
     position: absolute;

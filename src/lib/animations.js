@@ -6,17 +6,20 @@ export function setupScrollAnimation(
   mesh,
   camera,
   updateOverlayPosition,
-  initialPosition,
+  initialPosition
 ) {
+  const threeWrapper = document.querySelector(".three-wrapper");
+  console.log(threeWrapper);
   gsap.to(mesh.position, {
     x: 5,
-    y: -4,
+    y: -3,
     scrollTrigger: {
+      // markers: true,
       trigger: ".three-wrapper",
-      start: "40% top",
-      end: "bottom bottom",
+      start: "top 40%",
+      end: "115% bottom",
       scrub: 2.5,
-      ease: "power2.out",
+      ease: "power3.out",
     },
     onUpdate: () => {
       initialPosition.copy(mesh.position);
@@ -34,15 +37,16 @@ export function setupMagneticEffect(
 ) {
   if (isMouseOverScene && isMouseNearSphere) {
     // Apply magnetic effect with easing when mouse is near
+    console.log("targetPosition from gsap", targetPosition);
     gsap.to(mesh.position, {
-      x: targetPosition.x,
-      y: targetPosition.y,
-      z: targetPosition.z,
+      x: initialPosition.x + targetPosition.x, // Add targetPosition as offset
+      y: initialPosition.y + targetPosition.y, // Add targetPosition as offset
+      z: initialPosition.z + targetPosition.z, // Add targetPosition as offset
       duration: 0.8, // Adjust duration for smoother effect
       ease: "power2.out", // Add easing for smoother transition
     });
   } else {
-    // Return to center with easing
+    // Return to scroll animation position with easing
     gsap.to(mesh.position, {
       x: initialPosition.x,
       y: initialPosition.y,
