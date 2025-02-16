@@ -224,12 +224,10 @@ function updateMousePosition(event) {
       Math.pow(mouseVector.x - initialPosition.x, 2) +
         Math.pow(mouseVector.y - initialPosition.y, 2)
     );
-    console.log(`pt distance: ${ptDistance}`);
 
     // const magneticRadius = mesh.geometry.parameters.radius * 0.04; // Adjust this multiplier to change the magnetic field size
     const magneticRadius = 0.13;
 
-    console.log(`magneticRadius: ${magneticRadius}`);
 
     // Determine if the mouse is within the magnetic radius
     isMouseNearSphere = ptDistance <= magneticRadius;
