@@ -6,25 +6,33 @@ export function setupControls(mesh, camera, renderer) {
   const bodyElem = document.querySelector("body");
 
   const raycaster = new THREE.Raycaster();
-  const mouse = new THREE.Vector2();
   let isMouseOverScene = false;
   let isMouseNearSphere = false;
   const initialPosition = new THREE.Vector3(0, 0, 0); // True initial position
   const scrollAnimationPosition = new THREE.Vector3(0, 0, 0); // Position updated by scroll animation
   const targetPosition = new THREE.Vector3();
+  const mouse = new THREE.Vector2();
 
   function updateMousePosition(event) {
     const canvasWidth = window.innerWidth;
     const canvasHeight = window.innerHeight + 200;
+
     // Get mouse position in normalized device coordinates
     mouse.x = (event.clientX / canvasWidth) * 2 - 1;
     mouse.y = -(event.clientY / canvasHeight) * 2 + 1;
+
+    // Check if mouse is over scene
+    isMouseOverScene =
+      mouse.x > -1 && mouse.x < 1 && mouse.y > -1 && mouse.y < 1;
+
     // Update raycaster
     raycaster.setFromCamera(mouse, camera);
 
     if (mesh) {
       // Calculate the distance between the mouse position and the mesh position
-      const initialPositionNDC = scrollAnimationPosition.clone().project(camera); 
+      const initialPositionNDC = scrollAnimationPosition
+        .clone()
+        .project(camera);
 
       // Calculate the distance between the mouse position and the initial position in NDC
       const ptDistance = Math.sqrt(
@@ -36,21 +44,23 @@ export function setupControls(mesh, camera, renderer) {
 
       // Determine if the mouse is within the magnetic radius
       isMouseNearSphere = ptDistance <= magneticRadius;
+
       // Set target position only if mouse is near sphere
       if (isMouseNearSphere) {
-        console.log("targetPosition from updatemouseposition", targetPosition);
-        targetPosition.set(mouse.x * 1.5, mouse.y * 0.5, 0);
+        targetPosition.set(mouse.x * 1.1, mouse.y * 0.5, 0);
       } else {
-        targetPosition.copy(initialPosition); 
+        targetPosition.copy(initialPosition);
       }
 
       // updateOverlayPosition();
     }
   }
+
   // Add event listeners for mouse interactions
   bodyElem.addEventListener("mousemove", updateMousePosition);
   bodyElem.addEventListener("mouseenter", () => {
     isMouseOverScene = true;
+    console.log("mouse in scene");
   });
   bodyElem.addEventListener("mouseleave", () => {
     isMouseOverScene = false;
@@ -75,8 +85,8 @@ export function setupControls(mesh, camera, renderer) {
     updateOverlayPosition,
     getIsMouseOverScene: () => isMouseOverScene,
     getIsMouseNearSphere: () => isMouseNearSphere,
-    getInitialPosition: () => initialPosition, // Return true initial position
-    getScrollAnimationPosition: () => scrollAnimationPosition, // Return scroll animation position
+    getInitialPosition: () => initialPosition,
+    getScrollAnimationPosition: () => scrollAnimationPosition,
     getTargetPosition: () => targetPosition,
   };
 }

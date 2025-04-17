@@ -11,13 +11,13 @@ import { setupScrollAnimation, setupMagneticEffect } from "./animations.js";
 // Dynamically import shaders
 async function loadShaders() {
   const [vertexShader, fragmentShader] = await Promise.all([
-    fetch("src/lib/shaders/vertex.glsl").then((res) => res.text()),
-    fetch("src/lib/shaders/fragment.glsl").then((res) => res.text()),
+    fetch("shaders/vertex.glsl").then((res) => res.text()),
+    fetch("shaders/fragment.glsl").then((res) => res.text()),
   ]);
   return { vertexShader, fragmentShader };
 }
 
-export async function initScene(renderer) {
+export async function initScene(renderer, shadersPromise) {
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(
     45,
@@ -28,7 +28,7 @@ export async function initScene(renderer) {
   const composer = new EffectComposer(renderer);
 
   // Load shaders
-  const { vertexShader, fragmentShader } = await loadShaders();
+  const { vertexShader, fragmentShader } = await shadersPromise;
 
   // Create sphere with loaded shaders
   const uniforms = {
@@ -48,9 +48,18 @@ export async function initScene(renderer) {
 
   let mesh;
   function createSphere() {
-    const radius = window.innerWidth < 768 ? 2 : 4;
-    const detail = window.innerWidth < 768 ? 20 : 40;
+    let radius, detail;
 
+    if (window.innerWidth < 475) {
+      radius = 2.25;
+      detail = 25;
+    } else if (window.innerWidth < 768) {
+      radius = 3;
+      detail = 30;
+    } else {
+      radius = 4;
+      detail = 40;
+    }
     if (mesh) {
       scene.remove(mesh);
       mesh.geometry.dispose();

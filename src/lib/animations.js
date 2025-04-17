@@ -8,8 +8,6 @@ export function setupScrollAnimation(
   updateOverlayPosition,
   initialPosition
 ) {
-  const threeWrapper = document.querySelector(".three-wrapper");
-  console.log(threeWrapper);
   gsap.to(mesh.position, {
     x: 5,
     y: -3,
@@ -37,7 +35,6 @@ export function setupMagneticEffect(
 ) {
   if (isMouseOverScene && isMouseNearSphere) {
     // Apply magnetic effect with easing when mouse is near
-    console.log("targetPosition from gsap", targetPosition);
     gsap.to(mesh.position, {
       x: initialPosition.x + targetPosition.x, // Add targetPosition as offset
       y: initialPosition.y + targetPosition.y, // Add targetPosition as offset
@@ -55,4 +52,42 @@ export function setupMagneticEffect(
       ease: "power2.out", // Add easing for smoother transition
     });
   }
+}
+
+// --- New section animations ---
+
+export function animateHeroSection() {
+  // GSAP animations for the hero section
+  console.log("Animate Hero Section"); // Placeholder for now
+}
+export function animateServicesSection() {
+  const cardsWrapper = gsap.utils.toArray(".studio-section");
+  const cardsEl = gsap.utils.toArray(".studio-section .wrapper");
+
+  cardsWrapper.forEach((e, i) => {
+    const card = cardsEl[i];
+    let scale = 1,
+      rotate = 0;
+
+    if (i !== cardsEl.length - 1) {
+      scale = 0.9 + 0.025 * i;
+      rotate = -10;
+    }
+
+    gsap.to(card, {
+      scale: scale,
+      rotationX: rotate,
+      transformOrigin: "top center",
+      ease: "none",
+      scrollTrigger: {
+        trigger: e ,
+        start: "top " + (70 + 40 * i),
+        end: "bottom +=650px",
+        endTrigger: ".end-animation",
+        pin: e,
+        pinSpacing: false,
+        scrub: true,
+      },
+    });
+  });
 }
